@@ -84,7 +84,7 @@ public class LuceneCDA {
 		TopScoreDocCollector collector = TopScoreDocCollector.create(10, true);
         indexSearcher.search(query, collector);
 				
-        System.out.println("Nœmero de documentos =" + collector.getTotalHits());
+        System.out.println("Numero de documentos =" + collector.getTotalHits());
         
         ScoreDoc[] hits = collector.topDocs().scoreDocs;
         for (int i = 0; i < hits.length; i++) {
